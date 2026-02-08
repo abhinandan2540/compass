@@ -23,10 +23,9 @@ Unlike generic shortest-path demos, COMPASS blends **graph algorithms with real-
 
 COMPASS models the IIITM campus as a **navigation-aware weighted graph**:
 
-* **Nodes** → Campus locations (Gate, Academic Blocks, Hostels, Cafeterias, Gardens)
+* **Nodes** → Campus locations (Gate, Academic Blocks, Hostels, Cafeterias, Gardens etc.)
 * **Edges** → Walkable paths with real distance metrics
 * **Edge Metadata** →
-
   * Distance
   * Navigation instructions (left / right / straight)
   * Landmarks
@@ -36,9 +35,9 @@ This architecture allows COMPASS to generate **context-aware navigation**, not j
 
 ---
 
-## 🚀 Project Phases
+## Project Phases
 
-### 🔹 Phase 1 — Static Intelligent Navigation *(Implemented)*
+### Phase 1 — Static Intelligent Navigation *(Implemented)*
 
 A deterministic campus navigation system that:
 
@@ -46,11 +45,11 @@ A deterministic campus navigation system that:
 * Generates **step-by-step navigation instructions**
 * Enriches directions with **landmarks and attractions** from the campus environment
 
-> Ideal for first-time visitors and orientation purposes.
+> Ideal for *first-time visitors and orientation purposes*.
 
 ---
 
-### 🔹 Phase 2 — Dynamic Preference-Based Navigation *(Planned)*
+### Phase 2 — Dynamic Preference-Based Navigation *(Planned)*
 
 An advanced routing engine that will:
 
@@ -62,12 +61,12 @@ An advanced routing engine that will:
 
 ---
 
-## 🖥️ CLI Experience
+## CLI Experience
 
-COMPASS is designed to be run directly from the terminal:
+COMPASS is designed to be run directly from the terminal. Dwonload latest version of COMPASS from release section and run
 
 ```bash
-python IIITM_graphalgo.py
+compassv(version_specifics).exe
 ```
 
 Users are greeted with a **classic compass-style CLI interface**, guided through:
@@ -80,16 +79,7 @@ No flags. No complexity. Just intuitive navigation.
 
 ---
 
-## 🛠️ Tech Stack
-
-* **Language:** Python
-* **Algorithms:** Dijkstra / Graph Traversal
-* **Data Structures:** Navigation-aware weighted graphs
-* **Interface:** Terminal-based (CLI / ASCII UI)
-
----
-
-## 🎯 Use Cases
+## Use Cases
 
 * New students exploring the campus
 * Visitors attending events or conferences
@@ -98,24 +88,31 @@ No flags. No complexity. Just intuitive navigation.
 
 ---
 
-## 📌 Vision
+## Vision
 
 > COMPASS aims to bridge the gap between **theoretical graph algorithms** and **human-centric navigation systems**, laying the foundation for scalable, intelligent routing solutions in controlled environments like campuses, institutions, and smart cities.
 
 ---
 
-## 📄 License
+## Source Code Availability
 
-This project is released for **educational and research purposes**.
-Further extensions and collaborations are welcome.
+The core navigation engine of COMPASS is currently maintained as a
+**private research prototype**.
 
----
+To encourage experimentation and feedback, users can:
+- Test COMPASS via a **precompiled CLI binary**
+- Interact with the navigation system without access to internal logic
 
-If you want next, I can:
+This approach ensures:
+- Controlled evaluation
+- Protection of ongoing research work
+- Stable user-facing experience
 
-* Add **badges (Python, CLI, Graphs)**
-* Write a **Usage / Demo section with sample output**
-* Add an **Architecture diagram explanation**
-* Tailor this README for **GitHub / research submission**
+Source code will be released in future phases.
 
-Just tell me 👍
+
+Thank you,
+
+Abhinandan
+
+[LinkedIn](https://www.linkedin.com/in/abhinandanmandal/)
