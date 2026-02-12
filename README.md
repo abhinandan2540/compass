@@ -10,7 +10,8 @@ Unlike generic shortest-path demos, COMPASS blends **graph algorithms with real-
 ---
 
 ## COMPASS CLI
-<img width="1916" height="804" alt="Screenshot 2026-02-08 013252" src="https://github.com/user-attachments/assets/129ce750-d3f0-4724-9ec0-9f5df35092dd" />
+<img width="1292" height="807" alt="Screenshot 2026-02-12 154821" src="https://github.com/user-attachments/assets/e198d729-5177-440b-a90f-bef315c6567a" />
+
 
 
 ## Key Highlights
