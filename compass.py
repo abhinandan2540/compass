@@ -25,10 +25,14 @@ def show_banner():
 
 # show locations
 def show_locations(graph):
-    print("\n============== Available Locations: ==================\n")
+    print("""
+--------------------------------------------------------------
+                  Available Locations   
+--------------------------------------------------------------
+        """)
+
     for loc in sorted(graph.keys()):
         print(f" | {loc}", end=" ")
-
 
 
 # input mode
@@ -36,14 +40,16 @@ def interactive_input(graph):
     while True:
         start = input("\nEnter START location: ").strip()
         if start not in graph:
-            print(" =============== Invalid start location. Please try again.================== \n")
+            print(
+                " =============== Invalid start location. Please try again.================== \n")
             continue
         break
 
     while True:
         goal = input("\nEnter DESTINATION location: ").strip()
         if goal not in graph:
-            print(" =============== Invalid destination. Please try again.==================\n")
+            print(
+                " =============== Invalid destination. Please try again.==================\n")
             continue
         break
 
@@ -84,4 +90,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
