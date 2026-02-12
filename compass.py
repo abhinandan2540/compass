@@ -16,8 +16,8 @@ def show_banner():
 
 
               ----------------------------------------------------
-                Welcome to IIITM Smart Campus Navigation System
-              -----------------------------------------------------
+              |  Welcome to IIITM Smart Campus Navigation System |
+              ----------------------------------------------------
 
     """
     print(banner)
@@ -27,7 +27,7 @@ def show_banner():
 def show_locations(graph):
     print("""
 --------------------------------------------------------------
-                  Available Locations   
+|                  Available Locations                       |
 --------------------------------------------------------------
         """)
 
@@ -38,18 +38,35 @@ def show_locations(graph):
 # input mode
 def interactive_input(graph):
     while True:
-        start = input("\nEnter START location: ").strip()
+        start=input("""\n
+------------------------
+| Enter START Location |
+------------------------ 
+""").strip()
+        
         if start not in graph:
-            print(
-                " =============== Invalid start location. Please try again.================== \n")
+            print("""
+-----------------------------------------------------------------
+|            Invalid START location. Please try again           |       
+-----------------------------------------------------------------
+""")
             continue
         break
 
     while True:
-        goal = input("\nEnter DESTINATION location: ").strip()
+        goal=input("""\n
+------------------------------
+| Enter DESTINATION Location |
+------------------------------
+""").strip()
+        
         if goal not in graph:
-            print(
-                " =============== Invalid destination. Please try again.==================\n")
+            print("""
+-----------------------------------------------------------------
+|            Invalid DESTINATION location. Please try again      |
+-----------------------------------------------------------------
+""")
+            
             continue
         break
 
@@ -62,7 +79,11 @@ def main():
 
     start, goal = interactive_input(navigation_weighted_graph)
 
-    print("\nCalculating best route...............\n")
+    print("""
+--------------------------------------------------------------
+|                 Calculating best route                     |
+--------------------------------------------------------------                                            
+""")
 
     distance, path = dijkstra(
         navigation_weighted_graph,
@@ -71,21 +92,38 @@ def main():
     )
 
     if not path:
-        print(" ================== No path found. ====================")
+        print("""
+--------------------------------------------------
+|                No Path Found :(                |
+--------------------------------------------------                             
+""")
         return
 
-    print(" ====================== SHORTEST PATH =======================")
-    print(" → ".join(path))
-    print(f"\n # Total Distance: {distance} meters\n")
 
-    print("================ TURN-BY-TURN NAVIGATION ==================\n")
+    print("""
+-------------------------------------------------------
+|                 SHORTEST PATH                       |
+-------------------------------------------------------                      
+""")
+    
+    print(" → ".join(path))
+    print(f"\nTOTAL DISTANCE: {distance} meters\n")
+    print("""
+---------------------------------------------------------
+|                TURN-BY-TURN NAVIGATION                |
+---------------------------------------------------------          
+""")
 
     steps = generate_directions(navigation_weighted_graph, path)
 
     for i, step in enumerate(steps, 1):
         print(f"Step {i}:\n{step}\n")
 
-    print("===================== You have arrived at your destination. Enjoy your visit! ======================")
+    print("""
+-------------------------------------------------------------------------------------------------
+|                  You have arrived at your destination. Enjoy your visit!                      |
+-------------------------------------------------------------------------------------------------          
+""")
 
 
 if __name__ == "__main__":
